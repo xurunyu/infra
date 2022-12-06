@@ -1,0 +1,8 @@
+select * from balance_record
+where
+channel = 'AirwallexSG-DBS-SGEntity'
+and (date(create_time::timestamp + '8 hour') = '${date}')
+and currency = '${currency}'
+and balance_type = 'EOD'
+and account_no = '0720301854';
+

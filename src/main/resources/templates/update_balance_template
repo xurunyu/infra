@@ -1,0 +1,12 @@
+update balance_record
+set available_amount = '${balance}',
+usd_amount = '${usd_balance}',
+last_updated = now()
+where
+channel = 'AirwallexSG-DBS-SGEntity'
+and (date(create_time::timestamp + '8 hour') = '${date}')
+and currency = '${currency}'
+and balance_type = 'EOD'
+and account_no = '0720301854'
+and available_amount = 0 ;
+
