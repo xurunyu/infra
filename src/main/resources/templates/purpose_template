@@ -1,3 +1,11 @@
 INSERT INTO code_mapping("type", "from_code", "to_code")
 VALUES
-    ('PURPOSE_CODE', '${from}', '${to}'),
+<#list purposes as purpose>
+    <#if purpose_has_next>
+    ('PURPOSE_CODE', '${purpose.fromCode}', '${purpose.toCode}'),
+    </#if>
+    <#if !purpose_has_next>
+    ('PURPOSE_CODE', '${purpose.fromCode}', '${purpose.toCode}')
+    </#if>
+</#list>
+;
