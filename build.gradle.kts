@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
 	id("org.springframework.boot") version "3.0.0"
 	id("io.spring.dependency-management") version "1.1.0"
@@ -22,15 +20,19 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.freemarker:freemarker:2.3.31")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
-}
-
-tasks.withType<KotlinCompile> {
-	kotlinOptions {
-		freeCompilerArgs = listOf("-Xjsr305=strict")
-		jvmTarget = "17"
-	}
+	implementation("org.apache.httpcomponents:httpclient:4.5.14")
+	implementation("com.alibaba:fastjson:2.0.21")
+	implementation("javax.xml.bind:jaxb-api:2.4.0-b180830.0359")
+	implementation("com.fasterxml.jackson.core:jackson-databind")
+	implementation("io.vavr:vavr-jackson:0.10.3")
 }
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+	kotlinOptions {
+		jvmTarget = "17"
+	}
 }

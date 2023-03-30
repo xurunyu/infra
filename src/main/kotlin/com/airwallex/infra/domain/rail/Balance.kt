@@ -1,4 +1,4 @@
-package com.airwallex.infra.domain
+package com.airwallex.infra.domain.rail
 
 import java.math.BigDecimal
 

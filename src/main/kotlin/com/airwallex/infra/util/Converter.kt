@@ -1,6 +1,6 @@
 package com.airwallex.infra.util
 
-import com.airwallex.infra.domain.Balance
+import com.airwallex.infra.domain.rail.Balance
 import org.slf4j.LoggerFactory
 import org.springframework.util.StringUtils
 import java.io.File

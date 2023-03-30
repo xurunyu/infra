@@ -1,6 +1,6 @@
 package com.airwallex.infra.config
 
-import com.airwallex.infra.domain.Balance
+import com.airwallex.infra.domain.rail.Balance
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
 import freemarker.template.Configuration
